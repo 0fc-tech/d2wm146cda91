@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">CadoX</string>
+    <string name="app_name" translatable="false">CadoX</string>
+    <string name="label_desc_article">Description de l\'article</string>
 </resources>
