@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import com.example.cadox.R
 import com.example.cadox.databinding.FragmentArticleViewBinding
 import com.example.cadox.repository.ArticleRepository
@@ -41,6 +42,24 @@ class ArticleViewFragment : Fragment() {
                     favb.article?.url ?: "pas d'url",
                     Snackbar.LENGTH_LONG).show()
             }
+            favb.buttonEdit.setOnClickListener {
+                Navigation.findNavController(it)
+                    .navigate(
+                        ArticleViewFragmentDirections.
+                        actionArticleViewFragmentToArticleEditFragment(
+                            favb.article!!
+                        )
+                    )
+            }
         }
     }
 }
+
+
+
+
+
+
+
+
+

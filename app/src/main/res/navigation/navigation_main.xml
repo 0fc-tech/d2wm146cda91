@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/articleViewFragment">
+
+    <fragment
+        android:id="@+id/articleViewFragment"
+        android:name="com.example.cadox.ui.activity.ArticleViewFragment"
+        android:label="ArticleViewFragment" >
+        <action
+            android:id="@+id/action_articleViewFragment_to_articleEditFragment"
+            app:destination="@id/articleEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/articleEditFragment"
+        android:name="com.example.cadox.ui.activity.ArticleEditFragment"
+        android:label="fragment_article_edit"
+        tools:layout="@layout/fragment_article_edit" >
+        <argument
+            android:name="article"
+            app:argType="com.example.cadox.bo.Article" />
+    </fragment>
+</navigation>
